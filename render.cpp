@@ -35,7 +35,7 @@ bool setup(BelaContext *context, void *userData)
 {
 
     for(int i=0;i<NUM_STREAMS;i++) {
-        sampleStream[i] = new SampleStream("quad_test.wav", NUM_CHANNELS,BUFFER_LEN);
+        sampleStream[i] = new SampleStream("quad-test.wav", NUM_CHANNELS,BUFFER_LEN);
     }
 
     // Initialise auxiliary tasks
@@ -120,5 +120,5 @@ void logVisitorCount(const char* filename, float data) {
 void cleanup(BelaContext *context, void *userData)
 {
     for(int i=0;i<NUM_STREAMS;i++) { delete sampleStream[i]; }
-    logVisitorCount("daily_visitors.txt", gVisitorCount);
+    logVisitorCount("daily-visitors.txt", gVisitorCount);
 }
